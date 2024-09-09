@@ -22,7 +22,7 @@ do
    if [[ $(amixer sget Master | awk -F"[][]" '/Left:/ { print $4 }') == "off" ]]; then
       sound="Muted"
    fi
-   echo '[{"name": "music", "background": "'$background'", "full_text": " 󰝚 '$music' ", "border": "'$color1'"}, {"background": "'$background'", "full_text": "  '$date' ", "border": "'$color2'"}, {"background": "'$background'", "full_text": " 󰥔 '$time' ", "border": "'$color3'"}, {"background": "'$background'", "name": "sound", "full_text": " 󰕾 '$sound' ", "border": "'$color4'"}],'
+   echo '[{"name": "music", "background": "'$background'", "full_text": " 󰝚 '$music' ", "color": "'$color4'"}, {"background": "'$background'", "full_text": "  '$date' ", "color": "'$color3'"}, {"background": "'$background'", "full_text": " 󰥔 '$time' ", "color": "'$color2'"}, {"background": "'$background'", "name": "sound", "full_text": " 󰕾 '$sound' ", "color": "'$color1'"}],'
    sleep 0.3
 done) &
 
