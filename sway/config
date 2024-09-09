@@ -24,12 +24,10 @@ bar {
    colors {
       statusline $color15
       binding_mode $background $color3 $background
-      background $background
-      separator $color1
+      background #ffffff00
+      focused_workspace $color7 $color8 $color15
       active_workspace $color8 $background $color7
-      focused_workspace $color8 $color8 $color15
       inactive_workspace $color8 $background $color7
-      separator $color7
    }
 }
 
