@@ -18,8 +18,8 @@ do
    fi
    date=$(date "+%a %d/%m/%Y")
    time=$(date "+%H:%M")
-   sound=$(amixer sget Master | awk -F"[][]" '/Left:/ { print $2 }')
-   if [[ $(amixer sget Master | awk -F"[][]" '/Left:/ { print $4 }') == "off" ]]; then
+   sound=$(amixer sget Master | awk -F'[][]' '/Mono:/ { print $2 }')
+   if [[ $(amixer sget Master | awk -F'[][]' '/Mono:/ { print $6 }') == "off" ]]; then
       sound="Muted"
    fi
    echo '[{"name": "music", "background": "'$background'", "full_text": " 󰝚 '$music' ", "color": "'$color4'"}, {"background": "'$background'", "full_text": "  '$date' ", "color": "'$color3'"}, {"background": "'$background'", "full_text": " 󰥔 '$time' ", "color": "'$color2'"}, {"background": "'$background'", "name": "sound", "full_text": " 󰕾 '$sound' ", "color": "'$color1'"}],'
