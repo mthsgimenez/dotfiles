@@ -1,0 +1,17 @@
+include "$HOME/.cache/wal/colors-sway"
+
+output * bg $background solid_color
+# output * bg "$HOME/Imagens/custom-the-messenger-characters.jpg" fit $background
+
+gaps inner 0
+gaps outer 5
+
+font "Mononoki Nerd Font" 11
+
+default_border pixel 1
+client.focused $color4 $background $foreground $color3 $color4
+# client.focused_inactive #ffffff00 $background $foreground #ffffff00 #ffffff00
+# client.unfocused #ffffff00 $background $foreground #ffffff00 #ffffff00
+client.focused_inactive $color8 $background $foreground $color8 $color8
+client.unfocused $color8 $background $foreground $color8 $color8
+client.urgent $color1 $background $foreground $color5 $color1

@@ -1,0 +1,39 @@
+include style
+include vars
+include binds
+include "$HOME/.cache/wal/colors-sway"
+
+output $monitor1 resolution 1366x768 position 0,0
+output $monitor2 resolution 1280x720 position 0,768
+
+exec swayidle -w timeout 600 '$swaylock' timeout 602 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' timeout 900 'systemctl suspend'
+
+input * {
+    xkb_layout "br"
+}
+
+bar {
+   font "Cousine Nerd Font, Regular 10"
+   height 24
+   position top
+   strip_workspace_name yes
+   gaps 5
+   separator_symbol " "
+   status_padding 0
+   status_command ~/.config/sway/status.sh
+   colors {
+      statusline $color15
+      binding_mode $background $color3 $background
+      background $background
+      separator $color1
+      active_workspace $color8 $background $color7
+      focused_workspace $color8 $color8 $color15
+      inactive_workspace $color8 $background $color7
+      separator $color7
+   }
+}
+
+exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+
+include /etc/sway/config.d/*

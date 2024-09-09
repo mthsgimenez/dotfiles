@@ -1,0 +1,5 @@
+text-color = {foreground}
+placeholder-color = {color3}
+selection-color = {color4}
+background-color = {background}
+border-color = {color8}

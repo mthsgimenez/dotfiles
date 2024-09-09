@@ -1,0 +1,97 @@
+include vars
+
+bindsym $mod+d exec $swaylock
+
+bindsym $mod+Return exec $term
+bindsym $mod+Space exec $menu
+
+bindsym $mod+w kill
+bindsym $mod+Alt+r reload
+bindsym $mod+Shift+q exec swaymsg exit
+bindsym $mod+Alt+q exec "~/.config/sway/powermenu.sh"
+
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+
+# SCREENSHOT
+# requires jq slurp grim wl-clipboard
+
+# part of the screen
+bindsym $mod+Shift+s exec slurp | grim -g - - | wl-copy --type image/png
+
+# current window
+bindsym Alt+Print exec swaymsg -t get_tree | jq -r '.. | select(.focused?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | grim -g - - | wl-copy --type image/png
+
+# all screens
+bindsym $mod+Print exec grim - | wl-copy --type image/png
+
+# active screen
+bindsym $mod+Alt+Print exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') - | wl-copy --type image/png
+
+floating_modifier $mod normal
+
+# WORKSPACES
+set $1a 1a
+set $2a 2a
+set $3a 3a
+set $4a 4a
+
+set $1b 1b
+set $2b 2b
+set $3b 3b
+set $4b 4b
+
+bindsym $mod+1 workspace $1a
+bindsym $mod+2 workspace $2a
+bindsym $mod+3 workspace $3a
+bindsym $mod+4 workspace $4a
+
+bindsym Alt+1 workspace $1b
+bindsym Alt+2 workspace $2b
+bindsym Alt+3 workspace $3b
+bindsym Alt+4 workspace $4b
+
+bindsym $mod+Shift+1 move container to workspace $1a
+bindsym $mod+Shift+2 move container to workspace $2a
+bindsym $mod+Shift+3 move container to workspace $3a
+bindsym $mod+Shift+4 move container to workspace $4a
+
+bindsym Alt+Shift+1 move container to workspace $1b
+bindsym Alt+Shift+2 move container to workspace $2b
+bindsym Alt+Shift+3 move container to workspace $3b
+bindsym Alt+Shift+4 move container to workspace $4b
+
+workspace $1a output $monitor1
+workspace $2a output $monitor1
+workspace $3a output $monitor1
+workspace $4a output $monitor1
+
+workspace $1b output $monitor2
+workspace $2b output $monitor2
+workspace $3b output $monitor2
+workspace $4b output $monitor2
+
+# LAYOUT
+bindsym $mod+q split toggle
+bindsym $mod+Tab tabbed toggle
+bindsym $mod+s floating toggle
+bindsym $mod+f fullscreen
+bindsym $mod+e layout toggle split
+
+mode "resize" {
+    bindsym $left resize shrink width 10px
+    bindsym $down resize grow height 10px
+    bindsym $up resize shrink height 10px
+    bindsym $right resize grow width 10px
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
