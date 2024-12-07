@@ -4,9 +4,9 @@ local options = {
    nu = true, -- line numbers
    relativenumber = true, -- relative line numbers
    -- identation related
-   tabstop = 3,
-   softtabstop = 3,
-   shiftwidth = 3,
+   tabstop = 8,
+   softtabstop = 8,
+   shiftwidth = 8,
    expandtab = true,
    smartindent = true,
    --

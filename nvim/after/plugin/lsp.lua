@@ -30,7 +30,6 @@ end
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-   ensure_installed = { 'tsserver' },
    handlers = {
       default_setup,
       jsonls = function()
@@ -71,7 +70,7 @@ require('mason-lspconfig').setup({
                },
             },
          })
-      end
+      end,
    },
 })
 
