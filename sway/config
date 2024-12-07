@@ -13,8 +13,8 @@ input * {
 }
 
 bar {
-   font "Cousine Nerd Font, Regular 10"
-   height 24
+   font "Cousine Nerd Font, Regular 11"
+   height 28
    position top
    strip_workspace_name yes
    separator_symbol "|"
