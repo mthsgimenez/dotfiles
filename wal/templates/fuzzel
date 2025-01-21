@@ -1,0 +1,9 @@
+[colors]
+text = {foreground.strip}ff
+placeholder = {color3.strip}ff
+selection = {color4.strip}ff
+selection-text = {color15.strip}ff
+selection-match = {color1.strip}ff
+background = {background.strip}ff
+border = {color8.strip}ff
+match = {color1.strip}ff
