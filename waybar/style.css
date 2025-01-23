@@ -1,0 +1,71 @@
+@define-color background #0d1117;
+@define-color blue #78befc;
+@define-color green #79dd82;
+@define-color red #ff7b72;
+@define-color foreground #f0f6fc;
+@define-color gray #9198a1;
+
+* {
+        font-family: "Mononoki Nerd Font", monospace;
+        font-size: 14px;
+}
+
+window#waybar {
+        padding: 0px;
+        background-color: @background;
+        color: @foreground;
+        border: solid 1px @gray;
+}
+
+.modules-left {
+        margin: 2px;
+        margin-left: 7px;
+}
+
+#workspaces button {
+        transition: none;
+        padding: 0 5px;
+        color: @gray;
+}
+
+#workspaces button.focused {
+        color: @foreground;
+}
+
+#custom-prev, #custom-next {
+        font-size: 16px;
+        color: @green;
+        padding: 0 13px;
+}
+
+.modules-right {
+        margin: 3px;
+        margin-right: 15px;
+}
+
+#privacy {
+        color: @blue;
+        padding: 0 10px;
+}
+
+#privacy-item.audio-in, #privacy-item.screenshare {
+        color: @red;
+}
+
+#pulseaudio {
+        padding: 0 10px;
+}
+
+#pulseaudio.muted {
+        color: @red;
+}
+
+#network {
+        color: @gray;
+        padding: 0 10px;
+        margin-right: 10px;
+}
+
+#network.disconnected {
+        color: @red;
+}

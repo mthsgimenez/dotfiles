@@ -1,0 +1,60 @@
+{
+        "niri/workspaces": {
+                "format": "{icon}",
+                "format-icons": {
+                        "spotify": "󰓇",
+                        "default": "",
+                        "active": "",
+                }
+        },
+        "custom/prev": {
+                "tooltip": false,
+                "on-click": "playerctl -p spotify previous",
+                "format": "󰒮",
+        },
+        "custom/playerctl": {
+                "exec": "~/.config/waybar/playerctl.sh",
+                "tooltip": false,
+                "on-click": "playerctl -p spotify play-pause",
+                "format": "{}",
+        },
+        "custom/next": {
+                "tooltip": false,
+                "on-click": "playerctl -p spotify next",
+                "format": "󰒭",
+        },
+        "privacy": {
+                "modules": [
+                        {
+                                "type": "screenshare",
+                        },
+                        {
+                                "type": "audio-out",
+                        },
+                        {
+                                "type": "audio-in",
+                        },
+                ],
+        },
+        "pulseaudio": {
+                "tooltip": false,
+                "scroll-step": 2.0,
+                "on-click": "amixer set Master toggle",
+                "format-muted": "󰝟 Muted",
+                "format": "{icon} {volume}%",
+                "format-icons": {
+                        "default": ["󰕿", "󰖀", "󰕾"],
+                },
+        },
+        "network": {
+                "tooltip": false,
+                "format-ethernet": "󰈁 {ifname}",
+                "format-disconnected": "󰈂 offline",
+        },
+        "clock": {
+                "tooltip": false,
+                "format": " {:%H:%M}",
+                "format-alt": " {:L%a, %d de %b}",
+                "locale": "pt_BR.UTF-8"
+        },
+}

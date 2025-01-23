@@ -1,0 +1,22 @@
+{
+        "layer": "top",
+        "margin": "5px 10px 0px",
+        "position": "top",
+        "include": [
+                "~/.config/waybar/modules.jsonc",
+        ],
+        "modules-left": [
+                "niri/workspaces",
+        ],
+        "modules-center": [
+                "custom/prev",
+                "custom/playerctl",
+                "custom/next",
+        ],
+        "modules-right": [
+                "privacy",
+                "pulseaudio",
+                "network",
+                "clock",
+        ],
+}

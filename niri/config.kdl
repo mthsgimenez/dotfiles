@@ -5,6 +5,9 @@ environment {
 }
 
 
+spawn-at-startup "waybar"
+
+
 input {
         keyboard {
                 xkb {
@@ -17,9 +20,11 @@ input {
 
 output "HDMI-A-1" {
         position x=0 y=0
+        background-color "#7851a9"
 }
 output "VGA-1" {
         position x=0 y=768
+        background-color "#7851a9"
 }
 
 
@@ -58,9 +63,9 @@ layout {
         default-column-width { proportion 0.5; }
 
         focus-ring {
-                width 2
-                active-color "#7fc8ff"
-                inactive-color "#505050"
+                width 1
+                active-color "#78befc"
+                inactive-color "#9198a1"
         }
 }
 animations {
