@@ -6,7 +6,7 @@ environment {
 
 
 spawn-at-startup "waybar"
-spawn-at-startup "swaybg" "-i" "/home/user/Imagens/yellow.jpg" "-m" "stretch"
+spawn-at-startup "swaybg" "-i" "/home/user/Imagens/adventuretime.jpg" "-m" "fit"
 
 
 input {
@@ -54,7 +54,7 @@ window-rule {
 
 
 layout {
-        gaps 10
+        gaps 5
         center-focused-column "never"
         preset-column-widths {
                 proportion 0.33333
@@ -71,6 +71,9 @@ layout {
 }
 animations {
         off
+}
+hotkey-overlay {
+        skip-at-startup
 }
 
 
@@ -148,8 +151,7 @@ binds {
         Mod+Print { screenshot-screen; }
         Alt+Print { screenshot-window; }
 
-        Mod+Shift+Q { quit; }
-        Ctrl+Alt+Delete { quit; }
+        Alt+Q { spawn "sh" "-c" "~/.config/niri/powermenu.sh"; }
 
         Mod+P { power-off-monitors; }
 }
