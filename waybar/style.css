@@ -1,9 +1,4 @@
-@define-color background #0d1117;
-@define-color blue #78befc;
-@define-color green #79dd82;
-@define-color red #ff7b72;
-@define-color foreground #f0f6fc;
-@define-color gray #9198a1;
+@import "/home/user/.cache/wal/colors-waybar.css";
 
 * {
         font-family: "Mononoki Nerd Font", monospace;
@@ -14,7 +9,7 @@ window#waybar {
         padding: 0px;
         background-color: @background;
         color: @foreground;
-        border: solid 1px @gray;
+        border: solid 1px @color7;
 }
 
 .modules-left {
@@ -25,7 +20,7 @@ window#waybar {
 #workspaces button {
         transition: none;
         padding: 0 5px;
-        color: @gray;
+        color: @color7;
 }
 
 #workspaces button.focused {
@@ -34,7 +29,7 @@ window#waybar {
 
 #custom-prev, #custom-next {
         font-size: 16px;
-        color: @green;
+        color: @color2;
         padding: 0 13px;
 }
 
@@ -44,12 +39,12 @@ window#waybar {
 }
 
 #privacy {
-        color: @blue;
+        color: @color4;
         padding: 0 10px;
 }
 
 #privacy-item.audio-in, #privacy-item.screenshare {
-        color: @red;
+        color: @color1;
 }
 
 #pulseaudio {
@@ -57,15 +52,15 @@ window#waybar {
 }
 
 #pulseaudio.muted {
-        color: @red;
+        color: @color1;
 }
 
 #network {
-        color: @gray;
+        color: @color7;
         padding: 0 10px;
         margin-right: 10px;
 }
 
 #network.disconnected {
-        color: @red;
+        color: @color1;
 }
