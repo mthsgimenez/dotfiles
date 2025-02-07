@@ -1,0 +1,89 @@
+@define-color red #f44336;
+@define-color green #87a556;
+@define-color blue #a4caee;
+@define-color background #3a3a3a;
+@define-color foreground #d9d9d9;
+@define-color background-darker #2a2a2a;
+@define-color outline #1a1a1a;
+@define-color foreground-darker #8b8b8b;
+
+* {
+        font-family: "Mononoki Nerd Font", monospace;
+        font-size: 14px;
+}
+
+window#waybar {
+        padding: 0px;
+        background-color: @background;
+        color: @foreground;
+        border-bottom: solid 1px @outline;
+}
+
+.modules-left {
+        margin: 3px;
+        background-color: @background-darker;
+        border: solid 1px @outline;
+        border-radius: 5px;
+}
+
+#workspaces button {
+        transition: none;
+        padding: 0 7px;
+        color: @foreground-darker;
+        padding-right: 13px;
+}
+
+#workspaces button.focused {
+        color: @foreground;
+}
+
+.modules-center {
+        background-color: #2a2a2a;
+        margin: 3px;
+        border-radius: 5px;
+        border: solid 1px #1a1a1a;
+}
+
+#custom-prev, #custom-next {
+        font-size: 16px;
+        color: @green;
+        padding: 2px 13px;
+}
+
+.modules-right {
+        margin: 3px;
+        margin-right: 3px;
+        background-color: @background-darker;
+        border: solid 1px @outline;
+        border-radius: 5px;
+}
+
+#privacy {
+        color: @blue;
+        padding: 0 10px;
+}
+
+#privacy-item.audio-in, #privacy-item.screenshare {
+        color: @red;
+}
+
+#pulseaudio {
+        padding: 0 10px;
+}
+
+#pulseaudio.muted {
+        color: @red;
+}
+
+#network {
+        color: @foreground-darker;
+        padding: 0 10px;
+}
+
+#network.disconnected {
+        color: @red;
+}
+
+#clock {
+        padding: 0 10px;
+}
