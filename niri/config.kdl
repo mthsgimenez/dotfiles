@@ -6,6 +6,7 @@ environment {
 
 
 spawn-at-startup "waybar"
+spawn-at-startup "swaybg" "-i" "/home/user/Imagens/yellow.jpg" "-m" "stretch"
 
 
 input {
@@ -78,7 +79,7 @@ binds {
 
         Mod+Return { spawn "foot"; }
         Mod+Space { spawn "fuzzel"; }
-        Super+D { spawn "swaylock"; }
+        Super+D { spawn "swaylock" "-C" "/home/user/.cache/wal/swaylock"; }
 
         Mod+W { close-window; }
 
@@ -112,11 +113,11 @@ binds {
         Alt+Ctrl+U         { move-column-to-workspace-down; }
         Alt+Ctrl+I         { move-column-to-workspace-up; }
 
-        Alt+1 { focus-workspace "main"; }
+        Alt+1 { focus-workspace 1; }
         Alt+2 { focus-workspace 2; }
         Alt+3 { focus-workspace 3; }
         Alt+4 { focus-workspace "spotify"; }
-        Alt+Ctrl+1 { move-column-to-workspace "main"; }
+        Alt+Ctrl+1 { move-column-to-workspace 1; }
         Alt+Ctrl+2 { move-column-to-workspace 2; }
         Alt+Ctrl+3 { move-column-to-workspace 3; }
         Alt+Ctrl+4 { move-column-to-workspace "spotify"; }
