@@ -6,7 +6,7 @@ environment {
 
 
 spawn-at-startup "waybar"
-spawn-at-startup "swaybg" "-i" "/home/user/Imagens/adventuretime.jpg" "-m" "fit"
+spawn-at-startup "swaybg" "-i" "/home/user/Imagens/oootree.jpg" "-m" "stretch"
 
 
 input {
@@ -64,14 +64,14 @@ layout {
         default-column-width { proportion 0.5; }
 
         focus-ring {
-                width 1
+                width 2
                 active-color "#78befc"
                 inactive-color "#9198a1"
         }
 }
-animations {
-        off
-}
+// animations {
+//         off
+// }
 hotkey-overlay {
         skip-at-startup
 }

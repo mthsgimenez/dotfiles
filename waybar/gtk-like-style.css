@@ -14,13 +14,11 @@
 
 window#waybar {
         padding: 0px;
-        background-color: @background;
+        background-color: transparent;
         color: @foreground;
-        border-bottom: solid 1px @outline;
 }
 
 .modules-left {
-        margin: 3px;
         background-color: @background-darker;
         border: solid 1px @outline;
         border-radius: 5px;
@@ -39,7 +37,6 @@ window#waybar {
 
 .modules-center {
         background-color: #2a2a2a;
-        margin: 3px;
         border-radius: 5px;
         border: solid 1px #1a1a1a;
 }
@@ -51,8 +48,6 @@ window#waybar {
 }
 
 .modules-right {
-        margin: 3px;
-        margin-right: 3px;
         background-color: @background-darker;
         border: solid 1px @outline;
         border-radius: 5px;
