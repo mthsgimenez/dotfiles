@@ -40,6 +40,11 @@ workspace "spotify" {
 window-rule {
         match app-id="spotify"
         open-on-workspace "spotify"
+        open-maximized true
+}
+window-rule {
+        match app-id="gimp-3.0"
+        open-maximized true
 }
 // Open the Firefox picture-in-picture player as floating by default.
 window-rule {
@@ -50,6 +55,7 @@ window-rule {
 window-rule {
         match app-id=r#"^org\.keepassxc\.KeePassXC$"#
         block-out-from "screen-capture"
+        open-maximized true
 }
 
 
