@@ -6,7 +6,7 @@ environment {
 
 
 spawn-at-startup "waybar"
-spawn-at-startup "swaybg" "-i" "/home/user/Imagens/oootree.jpg" "-m" "stretch"
+spawn-at-startup "swaybg" "-i" "/home/user/Imagens/bg.jpg" "-m" "stretch"
 
 
 input {
@@ -46,14 +46,14 @@ window-rule {
         match app-id="gimp-3.0"
         open-maximized true
 }
-// Open the Firefox picture-in-picture player as floating by default.
+// Open picture-in-picture player as floating by default.
 window-rule {
-        match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+        match app-id=r#"LibreWolf$"# title="^Picture-in-Picture$"
         open-floating true
 }
 // Block password manager from screen capture.
 window-rule {
-        match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+        match app-id="KeePassXC"
         block-out-from "screen-capture"
         open-maximized true
 }
@@ -71,8 +71,8 @@ layout {
 
         focus-ring {
                 width 2
-                active-color "#78befc"
-                inactive-color "#9198a1"
+                active-color "#D0D0D0"
+                inactive-color "#151515"
         }
 }
 // animations {
