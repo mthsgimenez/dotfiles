@@ -25,10 +25,11 @@ window#waybar {
 }
 
 #workspaces button {
+        min-width: 0;
         transition: none;
-        padding: 0 7px;
+        padding: 0 15px;
         color: @foreground-darker;
-        padding-right: 13px;
+        padding-right: 20px;
 }
 
 #workspaces button.focused {
