@@ -7,35 +7,44 @@
 
 window#waybar {
         padding: 0px;
-        background-color: @background;
+        background-color: transparent;
         color: @foreground;
-        border: solid 1px @color7;
 }
 
 .modules-left {
-        margin: 2px;
-        margin-left: 7px;
+        background-color: @background;
+        border: solid 1px @color15;
+        border-radius: 5px;
 }
 
 #workspaces button {
+        min-width: 0;
         transition: none;
-        padding: 0 5px;
+        padding: 0 15px;
         color: @color7;
+        padding-right: 20px;
 }
 
 #workspaces button.focused {
         color: @foreground;
 }
 
+.modules-center {
+        background-color: @background;
+        border-radius: 5px;
+        border: solid 1px @outline;
+}
+
 #custom-prev, #custom-next {
         font-size: 16px;
         color: @color2;
-        padding: 0 13px;
+        padding: 2px 13px;
 }
 
 .modules-right {
-        margin: 3px;
-        margin-right: 15px;
+        background-color: @background;
+        border: solid 1px @color15;
+        border-radius: 5px;
 }
 
 #privacy {
@@ -58,9 +67,12 @@ window#waybar {
 #network {
         color: @color7;
         padding: 0 10px;
-        margin-right: 10px;
 }
 
 #network.disconnected {
         color: @color1;
+}
+
+#clock {
+        padding: 0 10px;
 }
