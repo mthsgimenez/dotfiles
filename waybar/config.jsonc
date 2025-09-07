@@ -1,6 +1,6 @@
 {
         "layer": "top",
-        "margin": "3 3 0",
+        "margin": "5 5 0",
         "position": "top",
         "include": [
                 "~/.config/waybar/modules.jsonc",
