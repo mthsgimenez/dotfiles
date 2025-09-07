@@ -32,7 +32,7 @@ window#waybar {
 .modules-center {
         background-color: @background;
         border-radius: 5px;
-        border: solid 1px @outline;
+        border: solid 1px @color15;
 }
 
 #custom-prev, #custom-next {
