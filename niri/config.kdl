@@ -1,10 +1,11 @@
 prefer-no-csd
 screenshot-path null
 environment {
-        DISPLAY ":0"
+        _JAVA_AWT_WM_NONREPARENTING "1"
 }
 
 
+spawn-at-startup "wmname" "LG3D"
 spawn-at-startup "waybar"
 spawn-at-startup "swaybg" "-i" "/home/user/Imagens/bg.jpg" "-m" "stretch"
 
@@ -60,7 +61,7 @@ window-rule {
 
 
 layout {
-        gaps 5
+        gaps 8
         center-focused-column "never"
         preset-column-widths {
                 proportion 0.33333
@@ -70,14 +71,14 @@ layout {
         default-column-width { proportion 0.5; }
 
         focus-ring {
-                width 2
+                width 1
                 active-color "#D0D0D0"
                 inactive-color "#151515"
         }
 }
-// animations {
-//         off
-// }
+animations {
+        off
+}
 hotkey-overlay {
         skip-at-startup
 }
