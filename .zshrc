@@ -18,7 +18,8 @@ bindkey -v
 export LANG='pt_BR.UTF-8'
 export EDITOR='nvim'
 
-alias ls="ls --color=auto"
+alias ls='ls --color=auto'
+alias niri-session='dbus-run-session niri'
 
 # https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Zsh
 autoload -Uz vcs_info
