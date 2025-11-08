@@ -2,25 +2,25 @@
         "niri/workspaces": {
                 "format": "{icon}",
                 "format-icons": {
-                        "spotify": "󰓇",
+                        "music": "󰎆",
                         "default": "",
                         "active": "",
                 }
         },
         "custom/prev": {
                 "tooltip": false,
-                "on-click": "playerctl -p spotify previous",
+                "on-click": "playerctl -p $MUSIC_PLAYER previous",
                 "format": "󰒮",
         },
         "custom/playerctl": {
                 "exec": "~/.config/waybar/playerctl.sh",
                 "tooltip": false,
-                "on-click": "playerctl -p spotify play-pause",
+                "on-click": "playerctl -p $MUSIC_PLAYER play-pause",
                 "format": "{}",
         },
         "custom/next": {
                 "tooltip": false,
-                "on-click": "playerctl -p spotify next",
+                "on-click": "playerctl -p $MUSIC_PLAYER next",
                 "format": "󰒭",
         },
         "privacy": {
