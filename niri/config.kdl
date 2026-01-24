@@ -51,6 +51,10 @@ window-rule {
         open-maximized true
 }
 window-rule {
+        match app-id="jetbrains-idea"
+        open-maximized true
+}
+window-rule {
         match app-id="gimp-3.0"
         open-maximized true
 }
