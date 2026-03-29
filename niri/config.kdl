@@ -6,7 +6,6 @@ environment {
 }
 
 
-spawn-at-startup "pipewire"
 spawn-at-startup "wmname" "LG3D"
 spawn-at-startup "waybar"
 spawn-at-startup "swaybg" "-i" "/home/user/Imagens/bg.jpg" "-m" "stretch"
@@ -19,11 +18,6 @@ input {
                 }
         }
         warp-mouse-to-focus
-}
-
-
-cursor {
-        xcursor-theme "whiteglass"
 }
 
 
