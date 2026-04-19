@@ -38,7 +38,22 @@ workspace "music" {
         open-on-output "VGA-1"
 }
 
-
+window-rule {
+        match app-id="steam"
+        open-maximized true
+}
+window-rule {
+        match app-id="steam" title="Friends List"
+        default-column-width { fixed 300; }
+        open-focused false
+        open-maximized false
+}
+window-rule {
+        match app-id="steam" title=r#".+"#
+        exclude title="^Friends List$"
+        exclude title="^Steam$"
+        open-maximized false
+}
 window-rule {
         match app-id="com.github.th_ch.youtube_music"
         open-on-workspace "music"
@@ -81,9 +96,7 @@ layout {
                 inactive-color "#151515"
         }
 }
-animations {
-        off
-}
+
 hotkey-overlay {
         skip-at-startup
 }
