@@ -57,4 +57,9 @@
                 "format-alt": " {:L%a, %d de %b}",
                 "locale": "pt_BR.UTF-8"
         },
+        "tray": {
+                "icon-size": 18,
+                "spacing": 10,
+                "show-passive-items": true
+        }
 }

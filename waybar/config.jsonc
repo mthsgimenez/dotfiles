@@ -15,6 +15,7 @@
         ],
         "modules-right": [
                 "privacy",
+                "tray",
                 "pulseaudio",
                 "network",
                 "clock",
