@@ -43,9 +43,14 @@ window-rule {
         open-maximized true
 }
 window-rule {
+        match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+        default-floating-position x=8 y=8 relative-to="bottom-right"
+        open-floating true
+        open-focused false
+}
+window-rule {
         match app-id="steam" title="Friends List"
         default-column-width { fixed 300; }
-        open-focused false
         open-maximized false
 }
 window-rule {
@@ -54,6 +59,7 @@ window-rule {
         exclude title="^Steam$"
         open-maximized false
 }
+
 window-rule {
         match app-id="com.github.th_ch.youtube_music"
         open-on-workspace "music"
@@ -170,9 +176,9 @@ binds {
         Mod+Shift+Equal { set-window-height "+10%"; }
 
         Mod+S       { toggle-window-floating; }
-        Mod+Shift+S { switch-focus-between-floating-and-tiling; }
 
         Print { screenshot; }
+        Mod+Shift+S { screenshot; }
         Mod+Print { screenshot-screen; }
         Alt+Print { screenshot-window; }
 
